@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Añade el nombre</label><br><br>
+    <input type="text"><br><br>
+
+    <label for="">El apellido</label><br><br>
+    <input type="text"><br><br>
+    
+    <input type="button" id="añadir" value="añadir">
+    <input type="button" id="pez" value="PECES"><br><br>
+     <select name="elegir" id="">
+         <option value=""></option>
+         <option value="gato" id="gato">gato</option>
+         <option value="pato" id="pato">pato</option>
+         <option value="pez" id="pez">pez</option>
+     </select>
+     <input type="button" id="elige" value="acceptar">
+
+
+
+    <script>
+        document.getElementById('añadir').addEventListener('click', aniadir,false);
+        document.getElementById('pez').addEventListener('click', aniadir2,false);
+        document.getElementById('elige').addEventListener('click', aniadir3,false);
+        var tags = document.getElementsByTagName('input')
+        
+
+
+        function aniadir(){
+            var nombre = tags[0].value
+            const parrafo = document.createElement('p');
+            const texto = document.createTextNode(nombre)
+            parrafo.appendChild(texto);
+            document.body.appendChild(parrafo)
+        }
+
+        function aniadir2(){
+            const imagen = document.createElement('img');
+            imagen.setAttribute("src","http://c.files.bbci.co.uk/14FDC/production/_97408958_pezgold.jpg")
+            document.body.appendChild(imagen)
+        }
+
+        function aniadir3(){
+            var gato = document.getElementById('gato')
+            var pato = document.getElementById('pato')
+            var pez = document.getElementById('pato')
+            const imagen = document.createElement('img')
+            if(pez.selected==true){
+                imagen.setAttribute("src","https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/el-pez-rojo_0.jpg")
+            }
+            document.body.appendChild(imagen)
+        
+        function aniadir4(){
+            
+        }
+
+        }
+
+
+
+    </script>
+
+    
+
+</body>
+</html>
