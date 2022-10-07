@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">Introduce tu nombre</p><input type="text" id="nombre">
+    <input type="button" value="Enviar" id="boton">
+    <select name="colores" id="color">
+    <option id="rojo">Rojo</option>
+    <option id="verde">Verde</option>
+    <option id="azul">Azul</option>
+    </select>
+
+    <script>
+        document.getElementById('boton').addEventListener('click',llamar,false)
+        function llamar(){
+            document.getElementById('p').innerHTML=document.getElementById('nombre').value
+            document.getElementById('p').style.color=((document.getElementById("rojo"))'red')
+            document.getElementById('p').style.color="red"
+            document.getElementById('p').style.color="red"
+            }
+     
+            
+
+    </script>
+    
+</body>
+</html>

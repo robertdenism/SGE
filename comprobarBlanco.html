@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Introduce tu nombre</label> <br>
+    <div class="error" ></div>
+    <input type="text"> <br>
+
+    <label>Introduce tu apellido</label> <br>
+    <input type="text"> <br>
+    <div class="error" ></div>
+
+    <label>Introduce tu edad</label> <br>
+    <input type="number"> <br>
+    <div class="error" ></div>
+
+    <label>Introduce tu contraseña</label> <br>
+    <input type="password"><br>
+    <div class="error" ></div>
+
+    <input type="checkbox"><label>he leido y accepto</label><br>
+    <div class="error" ></div>
+
+    <label >Sexo</label>
+    <select name="sexo" id="">
+        <option value=""></option>
+        <option value="M">M</option>
+        <option value="F">F</option>
+    </select><br>
+    <div class="error" ></div>
+    
+    
+    
+
+
+
+    <input type="button" value="Enviar" id="boton">
+    <p id='cambio'></p>
+
+    <script>
+
+        
+        document.getElementById('boton').addEventListener('click', llamar,false);
+        
+        function llamar(){
+            var tags = document.getElementsByTagName('input')
+            var error = document.getElementsByClassName('error')
+            for(var i=0; i<tags.length -1; i++){
+                if(tags[i].value==''){
+                    clases[i].innerHTML='VACIO'
+                    clases[i].style.color='red'
+                }
+                
+            }
+
+        }
+        
+        
+    </script>
+</body>
+</html>
