@@ -22,6 +22,7 @@
          <option value="pez" id="pez">pez</option>
      </select>
      <input type="button" id="elige" value="acceptar">
+     <input type="button" id="borrar" value="borrar">
 
 
 
@@ -29,6 +30,7 @@
         document.getElementById('añadir').addEventListener('click', aniadir,false);
         document.getElementById('pez').addEventListener('click', aniadir2,false);
         document.getElementById('elige').addEventListener('click', aniadir3,false);
+        document.getElementById('borrar').addEventListener('click', aniadir4,false);
         var tags = document.getElementsByTagName('input')
         
 
@@ -50,18 +52,25 @@
         function aniadir3(){
             var gato = document.getElementById('gato')
             var pato = document.getElementById('pato')
-            var pez = document.getElementById('pato')
+            var pez = document.getElementById('pez')
             const imagen = document.createElement('img')
             if(pez.selected==true){
                 imagen.setAttribute("src","https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/el-pez-rojo_0.jpg")
+                document.body.appendChild(imagen)
+                
             }
-            document.body.appendChild(imagen)
-        
+           
+        }
         function aniadir4(){
             
+            if(aniadir3==true){
+                imagen.setAttribute("src","https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/el-pez-rojo_0.jpg")
+                document.body.removeChild(imagen)
+                
+            }
         }
 
-        }
+        
 
 
 
