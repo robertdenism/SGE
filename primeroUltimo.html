@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,16 @@
 </head>
 <body>
     <label >Introduce tu texto</label><br><br>
-    <input type="text"><br>
+    <input type="text" id="txt"><br>
     <div id="lista"></div><br>
 
-    <input type="radio" name="addFirst">AddFirst
-    <input type="radio" name="addLast">AddLast
-    <input type="radio" name="removeFirst">removeFirst
-    <input type="radio" name="addFirst">removeFirst
-
+    <input type="radio" name="opcion" id="addFirst">AddFirst
+    <input type="radio" name="opcion" id="addLast">AddLast <br>
+    <input type="radio" name="opcion" id="removeFirst">RemoveFirst 
+    <input type="radio" name="opcion" id="removeLast">RemoveLast <br>
+    <input type="radio" name="opcion" id="replaceFirst">ReplaceFirst
+    <input type="radio" name="opcion" id="replaceLast">ReplaceLast
+<br>
     <input type="button" id="go" value="Go">
 
 
@@ -22,8 +24,59 @@
     <script>
         document.getElementById("go").addEventListener('click',func1,false);
 
-        function func1(){
+        
 
+        function func1(){
+            var texto = document.getElementById("txt").value
+
+            switch(document.querySelector('input[name="opcion"]:checked').id){
+                case("addFirst"):
+                    AddFirst(texto)
+                    break;
+                case("addLast"):
+                    AddLast(texto)
+                    break;
+                case("removeFirst"):
+                    RemoveFirst()
+                    break;
+                case("removeLast"):
+                    RemoveLast()
+                    break;
+                case("replaceFirst"):
+                    ReplaceFirst(texto)
+                    break;
+                case("replaceLast"):
+                    ReplaceLast(texto)
+                    break;    
+            }
+
+        }
+
+        function AddFirst(texto){
+            const parrafo=document.createElement('li');
+            parrafo.innerHTML=texto;
+            document.getElementById("lista").insertBefore(parrafo,document.getElementById("lista").firstChild)
+        }
+        function AddLast(texto){
+            const parrafo=document.createElement('li');
+            parrafo.innerHTML=texto;
+            document.getElementById("lista").appendChild(parrafo)
+        }
+        function RemoveFirst(){
+            document.getElementById("lista").removeChild(document.getElementById("lista").firstChild)
+        }
+        function RemoveLast(){
+            document.getElementById("lista").removeChild(document.getElementById("lista").lastChild)
+        }
+        function ReplaceFirst(texto){
+            const parrafo=document.createElement('li');
+            parrafo.innerHTML=texto;
+            document.getElementById("lista").replaceChild(parrafo,document.getElementById("lista").firstChild)
+        }
+        function ReplaceLast(texto){
+            const parrafo=document.createElement('li');
+            parrafo.innerHTML=texto;
+            document.getElementById("lista").replaceChild(parrafo,document.getElementById("lista").lastChild)
         }
 
 
