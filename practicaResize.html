@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" id="go" value="Go!">
+     <br><br>
+
+    <p>X<input type="text"id="x"><br>
+    <p>Y<input type="text" id="y"><br>
+
+    <p>RESIZE<input type="radio" name="opcion" id="resize"><br>
+    <p>MOVE<input type="radio" name="opcion" id="move"><br>
+    <input type="button" id="ir3" value="GO!">
+
+    <script>
+        document.getElementById("go").addEventListener('click',openWin,false);
+
+        //buscar navegador ordenador y el idioma operative sistem device 
+        
+
+        
+        alert(window.navigator.language);
+        alert(window.navigator.appCodeName);
+        alert();
+        
+
+        function openWin() {
+            myWindow = window.open('', '', 'width=400, height=200');
+        }
+
+        function moveWin() {
+            valor1=document.getElementById("x").value;
+            valor2=document.getElementById("y").value;
+            myWindow.resizeBy(parseInt(valor1), parseInt(valor2));
+        }
+
+        function mover(){
+            valor1=document.getElementById("x").value;
+            valor2=document.getElementById("y").value;
+            myWindow.moveTo(parseInt(valor1), parseInt(valor2));
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
