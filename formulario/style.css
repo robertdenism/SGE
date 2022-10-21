@@ -1,0 +1,106 @@
+body{
+    background-color: #E0E0E0;
+    font-family: sans-serif;
+}
+div {
+    margin: auto;
+    margin-top: 50px;
+    width: 25%;
+    height: 70%;
+    padding: 50px;
+    border-radius: 7px;
+    background: linear-gradient(225deg, #f0f0f0, #cacaca);
+    box-shadow:  -20px 20px 40px #b8b8b8,
+                20px -20px 40px #ffffff;
+}
+#nombre{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 40px #bebebe,
+                -15px -15px 40px #ffffff;
+    border: 0 solid;
+    font-size: 18px;
+}
+#mail{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 40px #bebebe,
+                -15px -15px 40px #ffffff;
+    border: 0 solid;
+    font-size: 18px;
+
+    }
+#contrasenia{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 40px #bebebe,
+                -15px -15px 40px #ffffff;
+    border: 0 solid;
+    font-size: 18px;
+    }
+#rContrasenia{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 40px #bebebe,
+                -15px -15px 40px #ffffff;
+    border: 0 solid;
+    font-size: 18px;
+    }
+#cCuenta{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 40px;
+    background-color: #FF6A00;
+    text-align: center;
+    border-radius: 4px;
+    background: #ff6a00;;
+    box-shadow:  15px 15px 40px #bebebe,
+                -15px -15px 40px #ffffff;
+    border: 0 solid;
+    font-size: 20px;
+    color: white;
+    }
+#cCuenta:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input{
+    font-size: 15px;
+}
+
+hr{
+    width:95%;
+}
+#check1:checked{
+    background-color: #ff6a00;
+}
+
+
+    
+
+
