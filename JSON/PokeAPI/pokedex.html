@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Pokedex</label>
+    <select id="Pokedex">
+        <option value=""></option>
+        <option value="Pikachu">Pikachu</option>
+        <option value="Charizard">Charizard</option>
+        <option value="Venusaur">Venusaur</option>
+        <option value="Blastoise">Blastoise</option>
+        <option value="Articuno">Articuno</option>
+        <option value="Zapdos">Zapdos</option>
+        <option value="Moltres">Moltres</option>
+    </select>
+    <input type="button" id="boton" value="GO!">
+    <br><br>
+
+    <label for="">Nombre</label><br>
+    <div id="nombre"></div><br>
+
+    <label for="">Habilidades</label><br>
+    <div id="habilidades"></div><br>
+
+    <label for="">Stats</label><br>
+    <div id="stats"></div><br>
+
+    <label for="">Tipo</label><br>
+    <div id="tipo"></div><br>
+
+    <script>
+        document.getElementById("boton").addEventListener("click",pulsado,false);
+
+        function pulsado(){
+            if(document.getElementById("Pokedex").value=="Pikachu"){
+                fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+                .then((response)=>response.json())
+                .then((data)=>console.log(data.stats))
+            }
+        }
+
+    </script>
+</body>
+</html>

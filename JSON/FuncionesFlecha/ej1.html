@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="nombre">Nombre <br>
+    <input type="text" name="" id="edad">Edad <br>
+    <input type="text" name="" id="equipo">Equipo <br>
+
+    <input type="button" value="Saludo" id="saludo">
+    <input type="button" value="MensajeHola" id="mensaje1">
+    <input type="button" value="Mensaje2" id="mensaje2">
+  
+
+    <script>
+        //mensaje simple con el nombre
+        document.getElementById("saludo").addEventListener("click",()=>alert("Hola "+document.getElementById("nombre").value),false);
+        //mensaje mas edad
+        
+        document.getElementById("mensaje1").addEventListener("click",()=>alert(`Tu edad en 2030: ${parseFloat(document.getElementById("edad").value) +8}`),false);
+
+        //pasando por parametros
+
+        document.getElementById("mensaje2").addEventListener("click",(a , b)=>alert("Tu edad: "+document.getElementById("edad").value+" Tu equipo: "+document.getElementById("equipo").value),false);
+
+
+    </script>
+</body>
+</html>
