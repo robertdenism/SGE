@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Goole Transalte</h1>
+
+    <h3>Texto Original</h3><br>
+
+    <select name="idiomas" id="idiomas">
+        <option value="es">Castellano</option>
+        <option value="de">Alemán</option>
+        <option value="en">Inglés</option>
+        <option value="hu">Húngaro</option>
+    </select><br>
+    <input type="text" id="original"><br><br>
+
+    <input type="button" name="traducir" value="traducir" id="b1">
+    <input type="button" name="detectar" value="Detectar Idioma" id="b2">
+    <input type="button" name="automatico" value="Automático a Castellano" id="b3"><br><br>
+
+
+    <select name="idiomas2" id="idiomas2">
+        <option value="es">Castellano</option>
+        <option value="de">Alemán</option>
+        <option value="en">Inglés</option>
+        <option value="hu">Húngaro</option>
+    </select><br>
+    <input type="text" id="traduccion">
+
+    <script>
+        document.getElementById("b1").addEventListener("click", pulsado, false);
+
+
+        function pulsado() {
+            var hola = document.getElementById("original").value
+
+            const encodedParams = new URLSearchParams();
+            encodedParams.append("q", hola);
+            encodedParams.append("source", idiomas.value);
+            encodedParams.append("target", idiomas2.value);
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'Accept-Encoding': 'application/gzip',
+                    'X-RapidAPI-Key': '8016579147mshdffff6fc2911bfep11fbbcjsna986b712e5e1',
+                    'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+                },
+                body: encodedParams
+            };
+
+            fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
+                .then(response => response.json())
+                .then(response => console.log(response))
+                .catch(err => console.error(err));
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
