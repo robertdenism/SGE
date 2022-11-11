@@ -35,10 +35,12 @@
 
     <script>
         document.getElementById("b1").addEventListener("click", pulsado, false);
-
+        document.getElementById("b2").addEventListener("click", pulsado2, false);
 
         function pulsado() {
             var hola = document.getElementById("original").value
+
+
 
             const encodedParams = new URLSearchParams();
             encodedParams.append("q", hola);
@@ -57,6 +59,29 @@
             };
 
             fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
+                .then(response => response.json())
+                .then(response => document.getElementById("traduccion").value=response.data.translations[0].translatedText)
+                .catch(err => console.error(err));
+        }
+
+        function pulsado2() {
+            var hola = document.getElementById("original").value
+
+            const encodedParams = new URLSearchParams();
+            encodedParams.append("q", hola);
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'Accept-Encoding': 'application/gzip',
+                    'X-RapidAPI-Key': '8016579147mshdffff6fc2911bfep11fbbcjsna986b712e5e1',
+                    'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+                },
+                body: encodedParams
+            };
+
+            fetch('https://google-translate1.p.rapidapi.com/language/translate/v2/detect', options)
                 .then(response => response.json())
                 .then(response => console.log(response))
                 .catch(err => console.error(err));
