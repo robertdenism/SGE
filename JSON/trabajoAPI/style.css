@@ -1,16 +1,24 @@
 #principal{
+    margin: auto;
+    margin-top: 50px;
+    width: 25%;
+    height: 70%;
+    padding: 50px;
+    border-radius: 7px;
+    background: linear-gradient(225deg, #f0f0f0, #cacaca);
+    box-shadow:  -20px 20px 40px #b8b8b8,
+                20px -20px 40px #ffffff;
     
-}
-body{
-    background-color: antiquewhite;
 }
 
 .my-custom-scrollbar {
     position: relative;
     height: 200px;
     overflow: auto;
-    }
-    
+ }
+
 .table-wrapper-scroll-y {
     display: block;
-    }
+}
+
+
