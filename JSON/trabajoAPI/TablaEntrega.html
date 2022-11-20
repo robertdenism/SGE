@@ -12,8 +12,6 @@
 </head>
 <body>
 
-    
-
     <div class="position-absolute top-0 start-50 translate-middle-x w-25 p-3 border" id="principal">
 
         <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
@@ -38,16 +36,19 @@
             </table>
         </div>
 
-        <div class="border">
-            <p>ID</p>
-            <input type="text" id="inId"><br>
-            <p>Nombre</p>
-            <input type="text" id="inNombre">
-            <p>Salario</p>
-            <input type="number" id="inSalario">
+        <div>
+            <div class="divId">
+                <input type="text" id="inId" placeholder="ID">
+            </div><br><br>
+            <div class="divNombre">
+                <input type="text" id="inNombre" minlength="5" maxlength="40" placeholder="NOMBRE">
+            </div><br><br>
+            <div class="divSalario">
+                <input type="number" id="inSalario" min="0" max="5" placeholder="SALARIO">
+            </div>
         </div><br>
 
-        <div id="botones" class="border d-flex justify-content-center">
+        <div id="botones" class=" d-flex justify-content-center">
             <button type="button" class="btn btn-outline-success" id="aniadir"><ion-icon name="add-circle-outline" size="large"></ion-icon></button>
             <button type="button" class="btn btn-outline-primary" id="editar"><ion-icon name="create-outline" size="large"></ion-icon></ion-icon></button>
             <button type="button" class="btn btn-outline-danger" id="eliminar"><ion-icon name="remove-circle-outline" size="large"></ion-icon></button>

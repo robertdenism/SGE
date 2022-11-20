@@ -1,13 +1,16 @@
 
         const cors ='https://cors-anywhere.herokuapp.com/'
-        const yourUrl =cors + 'https://nodejs-mysql-restapi-production-d8bd.up.railway.app/api/employees/';
-
-        
+        const yourUrl =cors+'https://nodejs-mysql-restapi-production-d8bd.up.railway.app/api/employees/';
 
 
-        function aniadir () {
+        function aniadir (){
             var nombre = document.getElementById("inNombre").value;
             var salario = document.getElementById("inSalario").value;
+
+            if(nombre==null){
+                console.log("error");
+                window.prompt("Nombre o salario vacios");
+            }else{
                 const data ={
                     name:nombre,
                     salary:salario
@@ -15,9 +18,10 @@
             
                 fetch(yourUrl, {method:'POST', body: JSON.stringify(data), headers:{'Content-Type': 'application/json'}})
                 .then(response => response.json())
-                .then(datos => console.log(datos));
-            
+                .then(datos => console.log(datos));  
             }
+        }
+            
             
            
         
@@ -69,8 +73,8 @@
                 contenido.innerHTML += `
 
                     <tr>
-                        <td>${ valor.id}</td>
-                        <td>${ valor.name}</td>
+                        <td>${valor.id}</td>
+                        <td>${valor.name}</td>
                         <td>${valor.salary}</td>
                     </tr>
                 `
@@ -82,9 +86,9 @@
             contenido.innerHTML += `
 
                     <tr>
-                        <td>${ datos.id}</td>
-                        <td>${ datos.name}</td>
-                        <td>${ datos.salary}</td>
+                        <td>${datos.id}</td>
+                        <td>${datos.name}</td>
+                        <td>${datos.salary}</td>
                     </tr>
                 `
         }

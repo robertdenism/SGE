@@ -1,8 +1,6 @@
 #principal{
     margin: auto;
     margin-top: 50px;
-    width: 25%;
-    height: 70%;
     padding: 50px;
     border-radius: 7px;
     background: linear-gradient(225deg, #f0f0f0, #cacaca);
@@ -20,5 +18,20 @@
 .table-wrapper-scroll-y {
     display: block;
 }
+
+input{
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 40px #bebebe;
+    border: 0 solid;
+    font-size: 18px;
+}
+
 
 
