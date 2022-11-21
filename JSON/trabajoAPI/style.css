@@ -1,3 +1,5 @@
+
+
 #principal{
     margin: auto;
     margin-top: 50px;
@@ -28,9 +30,13 @@ input{
     background-color: #E0E0E0;
     border-radius: 4px;
     background: #e0e0e0;
-    box-shadow:  15px 15px 40px #bebebe;
+    box-shadow:  -15px 15px 40px #bebebe;
     border: 0 solid;
     font-size: 18px;
+}
+
+ion-icon{
+    
 }
 
 
