@@ -6,11 +6,6 @@
         function aniadir (){
             var nombre = document.getElementById("inNombre").value;
             var salario = document.getElementById("inSalario").value;
-
-            if(nombre==null){
-                console.log("error");
-                window.prompt("Nombre o salario vacios");
-            }else{
                 const data ={
                     name:nombre,
                     salary:salario
@@ -20,7 +15,6 @@
                 .then(response => response.json())
                 .then(datos => console.log(datos));  
             }
-        }
             
             
            
@@ -46,8 +40,6 @@
             fetch(yourUrl+catchId,{method:'DELETE'})
                 .then(response => response.json())
                 .then(datos => (datos));
-
-
         }
 
         function findId() {
@@ -55,16 +47,12 @@
             fetch(yourUrl+catchId)
                 .then(response => response.json())
                 .then(datos => tabla2(datos));
-                console.log(catchId);
-            
-
         }
 
         function findAll() {
             fetch(yourUrl)
                 .then(response => response.json())
                 .then(datos => tabla(datos));
-
         }
         
         function tabla(datos){
