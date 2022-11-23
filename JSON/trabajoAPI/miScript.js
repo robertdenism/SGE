@@ -4,6 +4,19 @@
 
 
         function aniadir (){
+            let entrada = document.getElementsByTagName('input');
+            
+            var nombreB = true;
+            var salarioB = true;
+
+            if(entrada[0].value.length < 5 || entrada[0].value.length>40){
+                window.alert("Minimo 5 carácteres y max 40");
+                nombreB=false;
+            }else if(entrada[1].value.length==0 || entrada[1].value.length>99999){
+                window.alert("Introduzca un sueldo válido");
+                salarioB=false;
+            }
+            if(nombreB==true && salarioB==true){
             var nombre = document.getElementById("inNombre").value;
             var salario = document.getElementById("inSalario").value;
                 const data ={
@@ -15,12 +28,13 @@
                 .then(response => response.json())
                 .then(datos => console.log(datos));  
             }
-            
+        }   
             
            
         
 
         function editar() {
+
             var id = document.getElementById("inId").value;
             var nombre = document.getElementById("inNombre").value;
             var salario = document.getElementById("inSalario").value;
@@ -32,7 +46,8 @@
                 fetch(yourUrl+id, {method:'PATCH', body: JSON.stringify(data), headers:{'Content-Type': 'application/json'}})
                 .then(response => response.json())
                 .then(datos => console.log(datos));
-            
+
+                
             }
 
         function eliminar() {
@@ -79,5 +94,22 @@
                         <td>${datos.salary}</td>
                     </tr>
                 `
+        }
+
+        function add2(){
+            let entrada = document.getElementsByTagName('input');
+            
+            var nombreB = true;
+            var salarioB = true;
+
+            if(entrada[0].value.length < 5 || entrada[0].value.length>40){
+                window.alert("Minimo 5 carácteres y max 40");
+                nombreB=false;
+            }else if(entrada[1].value.length==0 || entrada[1].value.length>99999){
+                window.alert("Introduzca un sueldo válido");
+                salarioB=false;
+            }
+
+
         }
 
