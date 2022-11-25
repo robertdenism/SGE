@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,37 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="miScript.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
+
 <body>
 
     <div class="position-absolute top-0 start-50 translate-middle-x w-25 p-3 border" id="principal">
-            <div class="cajaTitulo">
-                <h4>TABLA DE EMPLEADOS</h4>
-            </div>
-            <hr width="100%">
-            <table id="cabecera1">
-                <thead>
-                    <tr>
-                        <th id="el1">ID</th>
-                        <th id="el2">NOMBRE</th>
-                        <th>SALARIO</th>
-                    </tr>
-                </thead>
-            </table>
+        <div class="cajaTitulo">
+            <h4>TABLA DE EMPLEADOS</h4>
+        </div>
+        <hr width="100%">
+        <table id="cabecera1">
+            <thead>
+                <tr>
+                    <th id="el1">ID</th>
+                    <th id="el2">NOMBRE</th>
+                    <th>SALARIO</th>
+                </tr>
+            </thead>
+        </table>
         <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" id="style-1">
             <table class="table table-hover table-bordered table-striped mb-0">
                 <tbody id="contenido">
                     <tr id="empleados">
-                        <td></td>
+                        <td><a href="Empleado.thml"></a></td>
                         <td></td>
                         <td></td>
                     </tr>
                 </tbody>
-                
-                
+
+
             </table>
         </div> <br>
 
@@ -53,26 +56,49 @@
         </div><br>
 
         <div id="botones" class=" d-flex justify-content-center">
-            <button type="button" style="margin:5px" title="Añadir" class="btn btn-outline-success" id="aniadir"><ion-icon name="add-circle-outline" size="large"></ion-icon></button>
-            <button type="button" style="margin:5px" title="Editar empleado" class="btn btn-outline-primary" id="editar"><ion-icon name="create-outline" size="large"></ion-icon></ion-icon></button>
-            <button type="button" style="margin:5px" title="Borrar empleado" class="btn btn-outline-danger" id="eliminar"><ion-icon name="remove-circle-outline" size="large"></ion-icon></button>
-            <button type="button" style="margin:5px" title="Buscar por id" class="btn btn-outline-secondary" id="findId"><ion-icon name="at-outline" size="large"></ion-icon></button>
-            <button type="button" style="margin:5px" title="Mostrar todos" class="btn btn-outline-secondary" id="findAll"><ion-icon name="people-outline" size="large"></ion-icon></i></ion-icon></button>
+            <button type="button" style="margin:5px" title="Añadir" class="btn btn-outline-success" id="aniadir">
+                <ion-icon name="add-circle-outline" size="large"></ion-icon>
+            </button>
+            <button type="button" style="margin:5px" title="Editar empleado" class="btn btn-outline-primary"
+                id="editar">
+                <ion-icon name="create-outline" size="large"></ion-icon>
+                </ion-icon>
+            </button>
+            <button type="button" style="margin:5px" title="Borrar empleado" class="btn btn-outline-danger"
+                id="eliminar">
+                <ion-icon name="remove-circle-outline" size="large"></ion-icon>
+            </button>
+            <button type="button" style="margin:5px" title="Buscar por id" class="btn btn-outline-secondary"
+                id="findId">
+                <ion-icon name="at-outline" size="large"></ion-icon>
+            </button>
+            <button type="button" style="margin:5px" title="Mostrar todos" class="btn btn-outline-secondary"
+                id="findAll">
+                <ion-icon name="people-outline" size="large"></ion-icon></i></ion-icon>
+            </button>
         </div>
+            <input type="file" id="jsonfileinput" />
+         <button type="button" style="margin:5px" title="Subir" class="btn btn-outline-secondary" id="subir">
+            <ion-icon name="arrow-up-circle-outline" size="large"></ion-icon>
+        </button>
+
     </div>
 
 
     <script>
-        
-        document.getElementById("aniadir").addEventListener("click",aniadir,false);
-        document.getElementById("editar").addEventListener("click",editar,false);
-        document.getElementById("eliminar").addEventListener("click",eliminar,false);
-        document.getElementById("findId").addEventListener("click",findId,false);
-        document.getElementById("findAll").addEventListener("click",findAll,false);
-        
+
+        document.getElementById("aniadir").addEventListener("click", aniadir, false);
+        document.getElementById("editar").addEventListener("click", editar, false);
+        document.getElementById("eliminar").addEventListener("click", eliminar, false);
+        document.getElementById("findId").addEventListener("click", findId, false);
+        document.getElementById("findAll").addEventListener("click", findAll, false);
+        document.getElementById("findAll").addEventListener("click", findAll, false);
+        document.getElementById("findAll").addEventListener("click", subir, false);
+
 
     </script>
 
-    
+
 </body>
+
 </html>

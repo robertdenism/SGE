@@ -76,7 +76,7 @@ function tabla(datos) {
         contenido.innerHTML += `
 
                     <tr>
-                        <td><a href="Empleado.html?${valor.id}">${valor.id}</a></td>
+                        <td><a href="Empleado.html?ID=${valor.id}">${valor.id}</a></td>
                         <td>${valor.name}</td>
                         <td>${valor.salary}</td>
                     </tr>
@@ -114,4 +114,23 @@ function add2() {
 
 
 }
+
+function subir(){
+    document.getElementById("jsonfileinput").addEventListener("change", function () {
+        var file_to_read = document.getElementById("jsonfileinput").files[0];
+        var fileread = new FileReader();
+        fileread.onload = function (e) {
+            var content = e.target.result;
+            var intern = JSON.parse(content); // parse json 
+            console.log(intern); // You can index every object
+            for(let i=0;i<intern.length;i++){
+                fetch(yourUrl, { method: 'POST', body: JSON.stringify(intern[i]), headers: { 'Content-Type': 'application/json' } })
+                .then(response => response.json())
+            }
+        };
+        fileread.readAsText(file_to_read);
+    });
+}
+
+
 
