@@ -4,7 +4,19 @@
         "salary": 547854
     },
     {
-        "name": "Kayler el Killer",
+        "name": "elmpleado 1",
         "salary": 547
+    },
+    {
+        "name": "elmpleado 2",
+        "salary": 548
+    },
+    {
+        "name": "elmpleado 3",
+        "salary": 549
+    },
+    {
+        "name": "elmpleado 4",
+        "salary": 550
     }
 ]

@@ -67,6 +67,25 @@ input{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: rgba(64, 116, 158, 0.658);
 }
+#subir{
+    width: 75%;
+    height: 45px;
+    margin: 0;
+    position: relative;
+    left: 10%;
+
+}
+button{
+    height: 50px;
+}
+#divSubir{
+    width: 100%;
+    display: flex;
+}
+#jsonfileinput{
+    height: 50px;
+    width: 100%;
+}
 
 
 
